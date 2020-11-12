@@ -4,7 +4,14 @@
         <meta charset="UTF-8">
         <title>CodePen - Demo Flexbox 3</title>
         <style>
+            * {
+                box-sizing: border-box; 
+            }
             body{
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                margin: 0;
                 padding: 2em;
             }
 
@@ -12,7 +19,6 @@
                 display: flex;
                 flex-flow: column wrap;
                 align-content: center;
-                background: tomato;
                 font-weight: bold;
                 padding: 10px;
             }
@@ -21,9 +27,13 @@
                 display: flex;
                 flex-flow: column wrap;
                 align-content: center;
-                background-color: lightgreen;
                 font-weight: bold;
                 padding: 10px;
+            }
+
+            header,footer{
+                background: yellowgreen;
+                height: 20vh;
             }
 
             .mainContainer{
@@ -35,22 +45,20 @@
 
             .mainContentItem{
                 text-align: left;
-                background: deepskyblue;
             }
 
             article{
                 padding: 10px;
                 margin: 10px;
-                background: aqua;
             }
 
-            .sideBarLeftItem{ background: gold;}
-            .sideBarRightItem{ background: hotpink;}
+            .sideBarLeftItem{ background:beige;}
+            .sideBarRightItem{ background:#D7E8D4;}
 
             .sideBarItem{flex: 1 0 0; border: 0px solid green;}
             .mainContentItem{flex: 3 0px;}
-            .sideBarLeftItem{order: 1;}
-            .mainContentItem{order:2;}
+            .sideBarLeftItem{order: 2;}
+            .mainContentItem{order:1;}
             .sideBarRightItem{order:3;}
         </style>
     </head>
